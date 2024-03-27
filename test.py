@@ -13,7 +13,7 @@ class load_data(Dataset):
 
     def __getitem__(self, index):
         image_path = self.img_dir[index]
-        label = '0' if 'dog' in image_path.split('\\')[-1] else 1
+        label = '0' if 'dog' in image_path.split('\\')[-1] else '1'
         img_data = np.array(Image.open(image_path))
         img_data_ = torch.from_numpy(img_data)
 
